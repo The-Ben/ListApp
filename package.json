@@ -15,5 +15,9 @@
     "url": "https://github.com/The-Ben/ListApp/issues"
   },
   "homepage": "https://github.com/The-Ben/ListApp#readme",
-  "description": ""
+  "description": "list App",
+  "dependencies": {
+    "@material-ui/styles": "^4.11.1"
+  },
+  "devDependencies": {}
 }
