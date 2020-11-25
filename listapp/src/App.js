@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Button from '@material-ui/core/Button';
+import { useDispatch } from "react-redux";
+import { actionCreators } from "../src/store/actions";
 
-function App() {
+export default function AddItem() {
+  const dispatch = useDispatch();
+  const [input, setInput] = useState("");
+
+  const handleInputChange = event => {
+    return setInput(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    dispatch(actionCreators.addToList(input));
+    setInput("");
+  };
+
+  const handleClear = () => {
+    dispatch(actionCreators.clearItems());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input
+        className="input"
+        placeholder="Add item..."
+        value={input}
+        onChange={handleInputChange}
+      />
+      <Button color="primary" variant="contained" onClick={handleSubmit}>
+        Add
+      </Button>
+      <Button color="secondary" variant="contained" onClick={handleClear}>
+        Clear
+      </Button>
     </div>
   );
 }
-
-export default App;
