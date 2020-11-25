@@ -1,0 +1,19 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "List App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Ben/Project2.git"
+  },
+  "author": "Ben Wakutz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Ben/Project2/issues"
+  },
+  "homepage": "https://github.com/The-Ben/Project2#readme"
+}
